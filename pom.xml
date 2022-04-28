@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.test</groupId>
 	<artifactId>java</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>java</name>
 	<description>Java Project Test for CICD</description>
