@@ -25,9 +25,12 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml -DskipTests
-    - run: mkdir -p path/to/artifact
+    - run: mkdir staging 
+    - name: Downloads artifacts
+      run: |
+        cd staging
     - name: Artifact for Java
       uses: actions/upload-artifact@v3.0.0
       with:
         name: java-test
-        path: path/to/artifact/   
+        path: staging 
