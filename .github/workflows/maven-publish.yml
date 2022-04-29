@@ -9,6 +9,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src
     permissions:
       contents: read
       packages: write
@@ -25,12 +28,8 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml -DskipTests
-    - run: mkdir staging 
-    - name: Downloads artifacts
-      run: |
-        cd staging
     - name: Artifact for Java
       uses: actions/upload-artifact@v3.0.0
       with:
         name: java-test
-        path: staging 
+        path: src/main/resources 
