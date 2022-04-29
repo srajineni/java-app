@@ -9,9 +9,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./java-app
     permissions:
       contents: read
       packages: write
@@ -28,8 +25,9 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml -DskipTests
+    - run: mkdir staging && cp java-app/target/*java-0.0.1-SNAPSHOT.war staging 
     - name: Artifact for Java
-      uses: actions/upload-artifact@v3.0.0
+      uses: actions/upload-artifact@v1 
       with:
-        name: java-test
-        path: java-app/src/main/resources 
+        name: Package
+        path: staging
