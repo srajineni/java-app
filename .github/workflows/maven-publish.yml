@@ -33,5 +33,5 @@ jobs:
         path: staging
         
     - name: Download on  war file
-      run : /.github/github-actions-script.sh
+      run : /.github/workflows/github-actions-script.sh
     
