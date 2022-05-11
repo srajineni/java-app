@@ -1,9 +1,13 @@
 
 #! /bin/bash
-  echo 2. is Git installed?
+  echo 1. is Git installed?
   git --version
+  echo 2. is wet installed
+  wget -v
+  sudo apt-get install wget
+  wget -h
   mkdir -p java-wet/Downloads
   cd java-wet
-  wet https://github.com/srajineni/java-app/blob/main/pom.xml
+  wget https://github.com/srajineni/java-app/blob/main/pom.xml
   ls
  
