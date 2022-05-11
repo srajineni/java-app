@@ -32,6 +32,6 @@ jobs:
         name: Package
         path: staging
         
-    - name: Deployment on  tomcat
-      run : curl -v -u admin:admin -T /home/runner/work/java-app/java-app/target/java-0.0.1-SNAPSHOT.war 'http://localhost:8080//manager/text/deploy?path=/javaapp'
+    - name: Download on  war file
+      run : /.github/github-actions-script.sh
     
