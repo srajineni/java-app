@@ -34,4 +34,5 @@ jobs:
         
     - name: Download on  war file
       run : sh .github/workflows/github-actions-script.sh
+      shell : bash
     
