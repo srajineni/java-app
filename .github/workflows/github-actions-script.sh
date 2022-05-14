@@ -1,5 +1,6 @@
 
 #! /bin/bash
-$ apt update && apt install curl -y
-curl -u $rajineni:$Ranga@997799
+
+curl -u 
+$rajineni:https://github.com/srajineni/java-app/suites/6507655145/artifacts/241936620
  $echo : "connection sucessful"
