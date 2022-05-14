@@ -1,6 +1,4 @@
 
 #! /bin/bash
-
-curl -u 
-wget https://github.com/srajineni/java-app/suites/6507655145/artifacts/241936620
+ $ cp /home/runner/work/java-app/java-app/target/*.war SATA_HSIAM
  echo : "connection sucessful"
