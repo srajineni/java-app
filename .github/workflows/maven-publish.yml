@@ -32,7 +32,7 @@ jobs:
         name: Package
         path: staging
         
-    - name: Download on  war file
+    - name: Copy war file from github
       run : sh .github/workflows/github-actions-script.sh
       shell : bash
     
