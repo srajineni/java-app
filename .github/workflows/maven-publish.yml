@@ -38,11 +38,11 @@ jobs:
       run : chmod 775 .github/workflows/github-actions-script.sh
       shell : bash
       
-    - name: display permission details
-      run : ls -Rl .github/
+    - name: display env details
+      run : echo  $SATA_HSIAM
       shell : bash
 
     - name: Copy war file from github
-      run : sh .github/workflows/github-actions-script.sh
+      run : bash -x .github/workflows/github-actions-script.sh
       shell : bash
     
