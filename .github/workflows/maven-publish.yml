@@ -23,10 +23,7 @@ jobs:
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         #settings-path: ${{ github.workspace }} # location for the settings.xml file.
     
-    - name: current location and direcroty details
-      run : pwd && ls -l
-      shell : bash
-    
+  
     
     - name: Build with Maven
       run: mvn -B package --file pom.xml -DskipTests
@@ -37,7 +34,11 @@ jobs:
         name: Package
         path: staging
 
-    - name: Copy war file from github
+    - name: add permission to execute script
+      run : chmod 775 .github/workflows/github-actions-script.sh
+      shell : bash
+      
+    - name: display permission details
       run : ls -Rl .github/
       shell : bash
 
